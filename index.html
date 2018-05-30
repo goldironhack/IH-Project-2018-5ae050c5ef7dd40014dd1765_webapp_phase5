@@ -2,14 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
+	<title>ROOM SEARCHING</title>
+	<link rel="stylesheet" href="style.css">
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBC3BP0ag-QYgGgkgxJjMOnPLTE631wTpA&callback=initMap" type="text/javascript"></script>
+		<script src="index.js"></script>
+    <script src ="https://data.cityofnewyork.us/api/views/xyye-rtrs/rows.json?accessType=DOWNLOAD&jsonp=myname">
+    </script>
+    <script src ="https://data.cityofnewyork.us/api/views/INLINE/rows.json?accessType=DOWNLOAD&jsonp=mycrime">
+    </script>
+    <script src ="https://data.cityofnewyork.us/api/views/hg8x-zxpr/rows.json?accessType=DOWNLOAD&jsonp=myhouse">
+    </script>
+    <script src ="https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/nycd/FeatureServer/0/query?where=1=1&outFields=*&outSR=4326&f=geojson&jsonp=geo">
+    </script>
 </head>
-<body>
-    <div class="container">
-        <h1>Hello World!</h1>
-        <button id="btn">Click me</button>
-    </div>
-    <script src="index.js"></script>
+<body class="body">
+<div class="container">
+		<div class="title">Welcome to NYU Stern School of Business</div>
+	    <div>
+	    	<div class="bar">
+	    		<div class="inbar">	
+	    		<button class="btn">Home</button>
+	    	    <button class="btn">Search</button>
+	    	    <button class="btn">About</button>
+	    		</div>
+	    	</div>
+	    </div>
+	    <p class="para">Here are some useful infos you will need<br/> to rent a suitable room around  NYU Stern School of Business. Let's find out!</p>
+	    <div>
+	    <div class="SandR">
+	    	<div>
+	    		<span>Your preference:</span>
+	    		<input type="text">Location
+		        <input type="text">Budget
+		        <input type="text">Safety
+		        <input type="text">Distance
+		        <button>Search</button>
+	        </div>
+	        <div class="result">prepare to insert results table</div>
+	   </div>
+	</div>
+	</div>
+	<div id="map"></div>
 </body>
 </html>
